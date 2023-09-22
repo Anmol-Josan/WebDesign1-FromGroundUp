@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <ul>
-    <li><a class="active" href="gallery.html">Gallery</a></li>
-    <li><a href="resource.html">Resource</a></li>
-    <li><a href="index.html">Index</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a class="active" id="list" href="gallery.html">Gallery</a></li>
+    <li><a class="list" href="resource.html">Resource</a></li>
+    <li><a class="list" href="index.html">Index</a></li>
+    <li><a class="list" href="contact.html">Contact</a></li>
 </ul>
 <body>
 </br>
@@ -18,30 +18,38 @@
 </br>
 <div>
     <center>
-    <fieldset style="align-self: center; align-items: center; align-content: center; align-tracks: center;">
-        <legend><span style="align-self: center; align-items: center; align-content: center; align-tracks: center;"> Contact Me</span></legend>
-        <div style="position: relative; text-align: center;">
-            <a>My phone number is 425-615-9153</a>
+        <h1>This is my contact page</h1>
+    <fieldset style="align-self: center; align-items: center; align-content: center; align-tracks: center; border: 3px solid black;">
+        <legend><span style="align-self: center; align-items: center; align-content: center; align-tracks: center; font-size: 150%;"> Contact Me</span></legend>
+        <div style="position: relative; text-align: center; padding-left:0%;">
+<a>My phone number is <strong><a style="color: rebeccapurple;">425-615-9153</a></strong></a></li>
         </br>
-            <a>My email address is <a href=mailto:ajosan@eastsideprep.org> ajosan@eastsideprep.org</a>
+<a>My email address is <button><a href=mailto:ajosan@eastsideprep.org>ajosan@eastsideprep.org</a></button>
         </br>
-            <a>I am avaliable all day long from 8:30AM to 3:30PM after these times, I am unavaliable.</a>
+<a>I am avaliable all day long from <strong><a style="color: coral;">8:30AM to 3:30PM</a></strong> after these times, I am unavaliable.</a>
         </br>
-            <a>Most of my day is spent in Eastside Preperatory School, which is in kirkland washington.</a>
+<a>Most of my day is spent in <strong><a style="color:darkred">Eastside Preperatory School, which is in Kirkland Washington.</a></strong></a>
         </br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.1004766685414!2d-122.20157312313962!3d47.643614285420206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906cc534674737%3A0xf92154cd626a9efb!2sEastside%20Preparatory%20School!5e0!3m2!1sen!2sus!4v1694374167458!5m2!1sen!2sus" width="600" height="450" style="border:0;"></iframe>
+<a>I typically can be found in the <strong>Upper School Makerspace</strong> during lunch and free time.</a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.1004766685414!2d-122.20157312313962!3d47.643614285420206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906cc534674737%3A0xf92154cd626a9efb!2sEastside%20Preparatory%20School!5e0!3m2!1sen!2sus!4v1694374167458!5m2!1sen!2sus" width="600" height="450"></iframe>
         </div>
     </fieldset>
-    </center>
+</center>
 </body>
 </div>
+<footer style="bottom: 0; position: fixed;">
+    <center>
+        <img src="Images/Walgreens.png">
+    </center>
+</footer>
+
 </html>
 <style>
 legend {
-    width: 76px;
+    width: 113px;
     position: relative;
-    padding: 2px;
     margin-left: 0%;
+    color: cadetblue;
 }
 body{
     background-color: lightgoldenrodyellow;
@@ -52,6 +60,16 @@ fieldset{
     width: 50%;
 }
 div{
+    position: relative;
+}
+iframe{
+    border: 2px solid black;
+}
+img{
+    vertical-align: bottom;
+    align-items: center;
+    align-self: center;
+    bottom:0;
     position: relative;
 }
 </style>
