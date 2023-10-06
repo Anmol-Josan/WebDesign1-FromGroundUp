@@ -45,6 +45,10 @@ ul {
     width: 100%;
 }
   
+li a:hover{
+    background-color: lightcoral;
+}
+
 .list {
     float: left;
     display: block;
