@@ -1,0 +1,79 @@
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#font{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+.lightblue{
+    background: lightblue;
+}
+#green{
+    background: lightgreen;
+}
+.lightgreen{
+    background: lightgreen;
+}
+/* Color Theme Swatches in Hex */
+.colortheme-1-hex { background-color: #B1AABF;float: left;display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none; }
+.colortheme-2-hex { background-color: #A39BBF;float: left;display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none; }
+.colortheme-3-hex { background-color: #98A6A4;float: left;display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none; }
+.colortheme-4-hex { background-color: #626432;float: left;display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none; }
+.colortheme-5-hex { background-color: #4D542A;float: left;display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none; }
+
+/* Color Theme Swatches in RGBA */
+.colortheme-1-rgba { background-color: rgba(177, 170, 191, 1); }
+.colortheme-2-rgba { background-color: rgba(163, 155, 191, 1); }
+.colortheme-3-rgba { background-color: rgba(152, 166, 164, 1); }
+.colortheme-4-rgba { background-color: rgba(98, 100, 50, 1); }
+.colortheme-5-rgba { background-color: rgba(77, 84, 42, 1); }
+
+/* Color Theme Swatches in HSLA */
+.colortheme-1-hsla { background-color: hsla(260, 14, 70, 1); }
+.colortheme-2-hsla { background-color: hsla(253, 21, 67, 1); }
+.colortheme-3-hsla { background-color: hsla(171, 7, 62, 1); }
+.colortheme-4-hsla { background-color: hsla(62, 33, 29, 1); }
+.colortheme-5-hsla { background-color: hsla(70, 33, 24, 1); }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: show;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.list {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: burlywood;
+}
+
+body{
+    background-color: gray;
+}
+
+img{
+    width: 100%;
+}
+
+table, th, td {
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table{
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
