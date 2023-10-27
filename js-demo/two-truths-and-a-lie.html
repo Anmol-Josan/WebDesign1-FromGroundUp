@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Truths and a Lie</title>
+</head>
+<h1>Time to do Javascript</h1>
+
+    <h2>Onclick stuff</h2>
+    <a href="https://www.google.com" onclick="alert('Opening A New Page')">Google.com</a>
+</br>
+    <p id="secret"></p>
+    <button onclick="reveal()">Show</button>
+    <button onclick="hide()">Hide</button>
+<body>
+    <h1>This is my two truths and a lie</h1>
+    </br>
+    </br>
+    <h3>Question 1: Pick the Lie</h3>
+    <form>
+        <label for="name">First Name:</label>
+        </br>
+        <input type="text" id="name" name="name"></input>
+        </br>
+        <input type="submit" value="Submit" onclick="hello()">
+    </form>
+    <form>
+        </br>
+        <input type="radio" id="statement1" name="2truths&1lie" value="lie">I have torn both acls</input>
+        </br>
+        <input type="radio" id="statement2" name="2truths&1lie" value="truth">I can speak 4 languages</input>
+        </br>
+        <input type="radio" id="statement3" name="2truths&1lie" value="truth">I hate coffee</input>
+        </br>
+        <button onclick="checkTruth()">Submit</button>
+    </form>
+</body>
+
+</html>
+<script>
+    function reveal(){
+        document.getElementById('secret').innerHTML='I appeared!'; document.getElementById('secret').style.color='red'; document.getElementById('secret').style.display ='block'
+    }
+
+    function hide(){
+        document.getElementById('secret').style.display ='none'
+    }
+
+    function hello() {
+        let fname=document.getElementById('name').value;
+        alert("hello, " + fname)
+    }
+
+    function checkTruth(){
+        let answerTag = document.getElementById('statement1')
+        if(document.getElementById('statement1').checked)
+        {
+            answerTag.innerHTML = "truth"
+            answerTag.style.color = "green;"
+            answerTag.style.display ='block'
+        }
+        if(document.getElementById('statement2').checked)
+        {
+            answerTag.innerHTML = "truth"
+            answerTag.style.color = "green;"
+            answerTag.style.display ='block'
+        }
+        if(document.getElementById('statement3').checked)
+        {
+            answerTag.innerHTML = "truth"
+            answerTag.style.color = "green;"
+            answerTag.style.display ='block'
+        }
+    }
+</script>
