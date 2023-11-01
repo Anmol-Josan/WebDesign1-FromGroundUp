@@ -34,9 +34,12 @@
         </br>
         <input type="radio" id="statement3" name="2truths&1lie" value="truth">I hate coffee</input>
         </br>
-        <button onclick="checkTruth()">Submit</button>
+        <input type="button" value="Submit" onclick="checkTruth()">
     </form>
+    <p id="answer"></p>
 </body>
+
+
 
 </html>
 <script>
@@ -54,24 +57,25 @@
     }
 
     function checkTruth(){
-        let answerTag = document.getElementById('statement1')
+        let answerTag = document.getElementById('answer')
         if(document.getElementById('statement1').checked)
         {
-            answerTag.innerHTML = "truth"
-            answerTag.style.color = "green;"
+            answerTag.innerHTML = 'lie'
+            answerTag.style.color = "red"
             answerTag.style.display ='block'
         }
         if(document.getElementById('statement2').checked)
         {
             answerTag.innerHTML = "truth"
-            answerTag.style.color = "green;"
+            answerTag.style.color = "green"
             answerTag.style.display ='block'
         }
         if(document.getElementById('statement3').checked)
         {
             answerTag.innerHTML = "truth"
-            answerTag.style.color = "green;"
+            answerTag.style.color = "green"
             answerTag.style.display ='block'
         }
+        console.log(answerTag.innerHTML)
     }
 </script>
