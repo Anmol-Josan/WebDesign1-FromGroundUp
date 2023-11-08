@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div class="navbar">
+    <img class="dropdown" style="position: relative; width: 7%; padding: 0.4%;" src="Images/logo-removebg-preview (1).png">
 		<div class="dropdown">
 			<button class="dropbtn">Configuration<i class="fa fa-caret-down"></i></button>
 			<div class="dropdown-content">
@@ -52,10 +53,29 @@
         <a href="">4</a>
       </div>
 		</div>
+    <table style="right:0px; width: 30%; top:25%; position: absolute; text-align: right;">
+      <tr><td style=" color: white;">Location: <button onclick="getLocation()">Use my location</button></td></tr>
+      <tr><td style="color:white" id="location"></td></tr>
+    </table>
 	</div>
   
 </body>
 </html>
+<script>
+  const x = document.getElementById("location");
+
+function getLocation() {
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+  function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    " Longitude: " + position.coords.longitude;
+  }
+}
+</script>
 <style>
   body{
     background-color: #222222;
@@ -95,6 +115,7 @@
 
 /* Dropdown button */
 .dropdown .dropbtn {
+  vertical-align:middle;
   font-size: 16px;
   border: none;
   outline: none;
