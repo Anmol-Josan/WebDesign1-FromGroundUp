@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" href="Images/favicon.ico" type="image/vnd.microsoft.icon">
   <link rel="stylesheet" href="https://use.typekit.net/loi6sxw.css">
   <link rel="stylesheet" href="Style/style.css">
   <meta charset="UTF-8">
@@ -25,8 +26,11 @@
     -->
   </center>
   <div class="navbar" style="z-index: 1; display: block;">
-    <a href="index.html" style="padding:0%; margin: 0%; width:8%; margin-right: 0%; padding-right: 0%; background-color:transparent;" class="none"><img class="dropdown" style="padding-right: 0%; position: inherit; width:100%; padding: 0.4%; margin-right:0%;"
-      src="Images/logo-removebg-preview (1).png"></a>
+    <a href="index.html"
+      style="padding:0%; margin: 0%; width:8%; margin-right: 0%; padding-right: 0%; background-color:transparent;"
+      class="none"><img class="dropdown"
+        style="padding-right: 0%; position: inherit; width:100%; padding: 0.4%; margin-right:0%;"
+        src="Images/logo-removebg-preview (1).png"></a>
     <div class="dropdown">
       <button class="dropbtn">
         <div class="nav">Configuration</div><i class="fa fa-caret-down"></i>
@@ -63,8 +67,8 @@
         <a href="">Solar Eclipses</a>
         <a href="interactiveChart.html">Interactive Sky Chart</a>
         <a href="">Sky Chart (old version)</a>
-        <a href="">Sun</a>
-        <a href="">Moon</a>
+        <a href="sun.html">Sun</a>
+        <a href="moon.html">Moon</a>
         <a href="">Planets</a>
         <a href="">Solar System Chart</a>
         <a href="">Comets</a>
@@ -107,7 +111,7 @@
   </div>
   <h1 style="margin-top: 6%;">Interactive Sky Chart:</h1>
   <center style="z-index: 2;">
-    <img src="Images/everthing.png" style="display: block; position:relative; margin-top: 1%; width:50%">
+    <img src="Images/everthing.png" id="wheel" style="display: block; position:relative; margin-top: 1%; width:50%">
     <form>
       <table style="text-align: center;">
         <tr>
@@ -115,30 +119,97 @@
           <td></td>
         </tr>
         <tr>
-          <td><input type="datetime-local" name="date" id="date"></td>
+          <td><input type="date" name="date" id="date"></td>
           <td style="padding-right: 0; margin-right: 0;"><input type="checkbox" id="ConstellationLines"
               name="ConstellationLines">Constellation Lines</td>
           <td><input type="checkbox" id="ConstellationBoundries" name="ConstellationBoundries">Constellation Boundries
           </td>
         </tr>
         <tr>
+          <td><input type="time" id="time" name="time"></td>
+          <td><input type="checkbox" id="ConstellationNames" name="ConstellationNames">Constellation Name</td>
+          <td><input type="checkbox" id="RemoveEverything" name="RemoveEverything">Remove Everything</td>
+        </tr>
+        <tr>
+          <td><input type="button"
+              style="padding-right: 18%; padding-left: 18%; background-color: #444444; border-color: #444444; color:white"
+              value="Sync to Now" onclick="syncToNow()"></td>
           <td><input type="reset"
               style="padding-left:42%; padding-right: 42%; background-color: #444444; border-color: #444444; color:white">
           </td>
-          <td><input type="checkbox" id="ConstellationNames" name="ConstellationNames">Constellation Name</td>
-          <td><input type="checkbox" id="RemoveEverything" name="RemoveEverything">Remove Lines and Names</td>
+          <td><input onclick="Update()" type="button"
+              style="padding-left:40%; padding-right: 40%; background-color: #444444; border-color: #444444; color:white"
+              value="Update"></td>
         </tr>
-        <center>
-          <tr>
-            <td><input type="button"
-              style="padding-left:62%; display: block; padding-right: 62%; position:static; background-color: #444444; border-color: #444444; color:white"
-              value="Sync to Now"></td>
-            <td><input type="button"
-              style="padding-left:70%; display: block; margin-left: 64%; position: static; padding-right: 70%; background-color: #444444; border-color: #444444; color:white"
-              value="Submit"></td>
-          </tr>
-        </center>
     </form>
+    </table>
+    <table style="color:white">
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
+      <tr>
+        <td>Events:</td>
+        <td>Time:</td>
+        <td>Altitude:</td>
+        <td>Azimuth</td>
+      </tr>
     </table>
   </center>
 </body>
@@ -162,5 +233,69 @@
         " Longitude: " + position.coords.longitude;
     }
   }
+
+  function convertTo24Hour(time) {
+    var hours = parseInt(time.substr(0, 2));
+    if (time.indexOf('AM') != -1 && hours == 12) {
+      time = time.replace('12', '0');
+    }
+    if (time.indexOf('PM') != -1 && hours < 12) {
+      time = time.replace(hours, (hours + 12));
+    }
+    return time.replace(/(am|pm)/, '');
+  }
+
+  function syncToNow() {
+    var date = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+    var time = date.substring(12, 22)
+    var ftime = time.replace("/", "-")
+    var time = ftime.replace("/", "-")
+
+    var todayDate = new Date().toISOString().slice(0, 10);
+    time = convertTo24Hour(time)
+    time = time.substring(0, 5)
+
+    document.getElementById("date").value = todayDate;
+    document.getElementById("time").value = time;
+  }
+
+  function Update() {
+    var Name = document.getElementById("ConstellationNames")
+    var Lines = document.getElementById("ConstellationLines")
+    var Boundries = document.getElementById("ConstellationBoundries")
+    var Remove = document.getElementById("RemoveEverything")
+    var image = document.getElementById("wheel")
+    if (Name.checked == true && Lines.checked == false && Boundries.checked == false) {
+      image.src = "Images/no_line_boundries-removebg-preview.png"
+    }
+    else if (Name.checked == false && Lines.checked == true && Boundries.checked == false) {
+      image.src = "Images/no_name_boundries-removebg-preview.png"
+    }
+    else if (Name.checked == false && Lines.checked == false && Boundries.checked == true) {
+      image.src = "Images/no_name_line-removebg-preview.png"
+    }
+    else if (Name.checked == false && Lines.checked == false && Boundries.checked == false) {
+      image.src = "Images/nothing.png"
+    }
+    else if (Name.checked == true && Lines.checked == false && Boundries.checked == true) {
+      image.src = "Images/no lines.png"
+    }
+    else if (Name.checked == true && Lines.checked == true && Boundries.checked == false) {
+      image.src = "Images/no_boundries-removebg-preview.png"
+    }
+    else if (Name.checked == false && Lines.checked == true && Boundries.checked == true) {
+      image.src = "Images/no name.png"
+    }
+    else if (Name.checked == true && Lines.checked == true && Boundries.checked == true) {
+      image.src = "Images/everthing.png"
+    }
+    if (RemoveEverything.checked == true) {
+      Name.checked = false;
+      Lines.checked = false;
+      Boundries.checked = false;
+      image.src = "Images/nothing.png"
+    }
+  }
+
 </script>
 </script>
