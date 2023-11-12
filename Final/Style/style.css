@@ -220,6 +220,24 @@ html{
     overflow: hidden;
   }
 
+  .table, .td, .th {
+    border: 3px solid #55555555;
+  }
+  
+  .topBar{
+    background-color: #111111;
+  }
+
+  .alternateRow{
+    background-color: #222222;
+  }
+
+  .table {
+    width: 25%;
+    border-collapse: collapse;
+    background-color: #333333;
+  }
+  
   /* Dropdown button */
   .dropdown2 .dropbtn2 {
     font-size: 16px;

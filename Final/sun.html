@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/vnd.microsoft.icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sun</title>
 </head>
 
@@ -118,15 +119,198 @@
                     <td><input type="date" name="date" id="date"></td>
                     <td><label for="date">Time:</label></td>
                     <td><input type="time" id="time" name="time"></td>
+                </tr>
+                <tr>
                     <td><input type="button"
-                            style="padding-right: 18%; padding-left: 18%; margin-left: 2%; background-color: #444444; border-color: #444444; color:white"
+                            style="padding-right: 60%; padding-left: 60%; margin-left: 2%; background-color: #444444; border-color: #444444; color:white"
                             value="Sync to Now" onclick="syncToNow()"></td>
-                    <td><input onclick="Update()" type="button"
-                            style="padding-left:40%; padding-right: 40%; margin-left: 64%; background-color: #444444; border-color: #444444; color:white"
-                            value="Update"></td>
+                    <td><input type="button"
+                            style="padding-left:55%; padding-right: 55%; margin-left: 77%; background-color: #444444; border-color: #444444; color:white"
+                            value="Update"><!--There is no onclick event here because they have some aspx php syle code which I cannot incoroporate here, so this button is purely design-->
+                    </td>
                 </tr>
             </table>
         </form>
+        </table>
+        </br>
+        <h4>Daily Events:</h4>
+        <table class="table" style="color:white">
+            <tr class="topBar">
+                <td class="td">Event</td>
+                <td class="td">Time</td>
+                <td class="td">Altitude</td>
+                <td class="td">Azimuth</td>
+            </tr>
+            <tr>
+                <td class="td">Astronomical twilight begins:</td>
+                <td class="td">05:23</td>
+                <td class="td">-18.0°</td>
+                <td class="td">97°</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Nautical twilight begins:</td>
+                <td class="td">05:59</td>
+                <td class="td">-12.0°</td>
+                <td class="td">103°</td>
+            </tr>
+            <tr>
+                <td class="td">Civil twilight begins:</td>
+                <td class="td">05:59</td>
+                <td class="td">-6.0°</td>
+                <td class="td">110°</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Sunrise:</td>
+                <td class="td">05:59</td>
+                <td class="td">-0.8°</td>
+                <td class="td">116°</td>
+            </tr>
+            <tr>
+                <td class="td">Maximum altitude:</td>
+                <td class="td">05:59</td>
+                <td class="td">24.8°</td>
+                <td class="td">180°</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Sunset:</td>
+                <td class="td">05:59</td>
+                <td class="td">-0.8°</td>
+                <td class="td">224°</td>
+            </tr>
+            <tr>
+                <td class="td">Civil twilight ends:</td>
+                <td class="td">05:59</td>
+                <td class="td">-6.0°</td>
+                <td class="td">250°</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Nautical twilight ends:</td>
+                <td class="td">05:59</td>
+                <td class="td">-12.0°</td>
+                <td class="td">257°</td>
+            </tr>
+            <tr>
+                <td class="td">Astronomical twilight ends:</td>
+                <td class="td">05:59</td>
+                <td class="td">-18.0°</td>
+                <td class="td">263°</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Minimum altitude:</td>
+                <td class="td">05:59</td>
+                <td class="td">-60.5°</td>
+                <td class="td">0°</td>
+            </tr>
+        </table>
+        </br>
+        <h4>Yearly Events:</h4>
+        <table class="table" style="color:white; width: 17%;">
+            <tr class="topBar">
+                <td class="td">Event</td>
+                <td class="td">Time</td>
+            </tr>
+            <tr>
+                <td class="td">Spring equinox</td>
+                <td class="td">Mar 20, 14:24</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Summer solstice</td>
+                <td class="td">Jun 21, 07:57</td>
+            </tr>
+            <tr>
+                <td class="td">Autumn equinox</td>
+                <td class="td">Sep 22, 23:49</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Winter solstice</td>
+                <td class="td">Dec 21, 19:27</td>
+            </tr>
+        </table>
+        <h4>Suns Position:</h4>
+        <img src="Images/skychart.ashx">
+        <h4>Latest images of the Sun from the <a href="http://sdo.gsfc.nasa.gov/">SDO Satellite</a> Credit: NASA</h4>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 14</div>
+                <img src="Images/image1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 14</div>
+                <img src="Images/image2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 14</div>
+                <img src="Images/image3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 14</div>
+                <img src="Images/image4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 14</div>
+                <img src="Images/image5.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 14</div>
+                <img src="Images/image6.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 14</div>
+                <img src="Images/image7.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 14</div>
+                <img src="Images/image8.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">9 / 14</div>
+                <img src="Images/image9.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">10 / 14</div>
+                <img src="Images/image10.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">11 / 14</div>
+                <img src="Images/iamge11.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">12 / 14</div>
+                <img src="Images/image12.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">13 / 14</div>
+                <img src="Images/image13.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">14 / 14</div>
+                <img src="Images/image14.jpg" style="width:100%">
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+        </div>
+        </div>
     </center>
 </body>
 
@@ -152,10 +336,10 @@
 
     function convertTo24Hour(time) {
         var hours = parseInt(time.substr(0, 2));
-        if(time.indexOf('AM') != -1 && hours == 12) {
+        if (time.indexOf('AM') != -1 && hours == 12) {
             time = time.replace('12', '0');
         }
-        if(time.indexOf('PM')  != -1 && hours < 12) {
+        if (time.indexOf('PM') != -1 && hours < 12) {
             time = time.replace(hours, (hours + 12));
         }
         return time.replace(/(am|pm)/, '');
@@ -163,17 +347,96 @@
 
     function syncToNow() {
         var date = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
-        var time = date.substring(12,22)
+        var time = date.substring(12, 22)
         var ftime = time.replace("/", "-")
         var time = ftime.replace("/", "-")
 
         var todayDate = new Date().toISOString().slice(0, 10);
         time = convertTo24Hour(time)
-        time = time.substring(0,5)
+        time = time.substring(0, 5)
 
         document.getElementById("date").value = todayDate;
         document.getElementById("time").value = time;
     }
 
-    
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
 </script>
+<style>
+    .slideshow-container {
+        width: 30%;
+    }
+
+    .slideshow-container a:hover {
+        background-color: transparent;
+        display: inline;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0);
+    }
+
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
+</style>

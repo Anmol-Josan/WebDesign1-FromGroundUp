@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/loi6sxw.css">
+    <link rel="stylesheet" href="Style/style.css">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/vnd.microsoft.icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sun</title>
+</head>
+
+<body>
+    <center>
+        <!--<div id="myPopup" class="popup show">
+      <div class="popup-content">
+        <h1 style="color: #ffffe0;">
+          <a href="https://play.google.com/store/apps/details?id=com.heavens_above.viewer">Install Our Android App</a>
+        </h1>
+        <img src="Images/AndroidApp.png">
+        <button id="closePopup" onclick="hide()">
+          Close
+        </button>
+      </div>
+    </div>
+    -->
+    </center>
+    <div class="navbar" style="z-index: 1; display: block;">
+        <a href="index.html"
+            style="padding:0%; margin: 0%; width:8%; margin-right: 0%; padding-right: 0%; background-color:transparent;"
+            class="none"><img class="dropdown"
+                style="padding-right: 0%; position: inherit; width:100%; padding: 0.4%; margin-right:0%;"
+                src="Images/logo-removebg-preview (1).png"></a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <div class="nav">Configuration</div><i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="">Login</a>
+                <a href="">Change Observing Location</a>
+            </div>
+        </div>
+        <div class="dropdown1">
+            <button class="dropbtn1">Satellites<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content1">
+                <a href="">Live Sky View</a>
+                <a href="">Starlink</a>
+                <a href="">ISS simulation</a>
+                <a href="">Tesla Roadster Trajectory</a>
+                <a href="">ISS Predictions</a>
+                <a href="">Tiangong</a>
+                <a href="">Starlink Passes</a>
+                <a href="">BlueWalker 3</a>
+                <a href="">N. Korean Satellite</a>
+                <a href="">Hubble Telescope</a>
+                <a href="">Envisat</a>
+                <a href="">Daily Predictions</a>
+                <a href="">Satellite Database</a>
+                <a href="">Spacecraft Escaping</a>
+                <a href="">Amateur Radio Satallites</a>
+                <a href="">Height of ISS</a>
+            </div>
+        </div>
+        <div class="dropdown2">
+            <button class="dropbtn2">Astronomy<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content2">
+                <a href="">Solar Eclipses</a>
+                <a href="interactiveChart.html">Interactive Sky Chart</a>
+                <a href="">Sky Chart (old version)</a>
+                <a href="sun.html">Sun</a>
+                <a href="moon.html">Moon</a>
+                <a href="">Planets</a>
+                <a href="">Solar System Chart</a>
+                <a href="">Comets</a>
+                <a href="">Asteriods</a>
+                <a href="">Constellations</a>
+            </div>
+        </div>
+        <div class="dropdown3">
+            <button class="dropbtn3">Stats<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content3">
+                <a href="">Download Our App</a>
+                <a href="">Forum of Reddit</a>
+                <a href="">What Time is it?</a>
+                <a href="">Calendar</a>
+                <a href="">FAQ</a>
+                <a href="">Links out to other sites</a>
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="dropdown4">
+            <button class="dropbtn4">Misc<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content4">
+                <a href="">Daily Page Counts</a>
+                <a href="">Visits by Country</a>
+                <a href="">Visits by OS and Browser</a>
+                <a href="">Visits by Language</a>
+                <a href="">World</a>
+                <a href="">Europe</a>
+                <a href="">USA</a>
+            </div>
+        </div>
+        <table style="right:0px; width: 100%; position: absolute; text-align: right;">
+            <tr>
+                <td style=" color: white;">Location: <button onclick="getLocation()">Use my location</button></td>
+            </tr>
+            <tr>
+                <td style="color:white" id="location"></td>
+            </tr>
+        </table>
+    </div>
+    <center style="z-index: 2;">
+        <h1 style="margin-top: 6%;">Moon:</h1>
+        <form>
+            <table style="text-align: center;">
+                <tr>
+                    <td><label for="date">Date:</label></td>
+                    <td><input type="date" name="date" id="date"></td>
+                    <td><label for="date">Time:</label></td>
+                    <td><input type="time" id="time" name="time"></td>
+                </tr>
+                <tr>
+                    <td><input type="button"
+                            style="padding-right: 60%; padding-left: 60%; margin-left: 2%; background-color: #444444; border-color: #444444; color:white"
+                            value="Sync to Now" onclick="syncToNow()"></td>
+                    <td><input type="button"
+                            style="padding-left:55%; padding-right: 55%; margin-left: 77%; background-color: #444444; border-color: #444444; color:white"
+                            value="Update"><!--There is no onclick event here because they have some aspx php syle code which I cannot incoroporate here, so this button is purely design-->
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </table>
+        </br>
+        <table class="table" style="width: 20%; color:white">
+            <tr class="topBar">
+                <td class="td" style="border-right-width: 0; font-weight: 600;">Position</td>
+                <td class="td" style="border-left-width: 0;"></td>
+            </tr>
+            <tr>
+                <td class="td">Altitude</td>
+                <td class="td">21.9°</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Azimuth</td>
+                <td class="td">199.6° (SSW)</td>
+            </tr>
+            <tr>
+                <td class="td">Right ascension</td>
+                <td class="td">14h 42m 26s</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Declination</td>
+                <td class="td">-18° 27' 28"</td>
+            </tr>
+            <tr>
+                <td class="td">Range</td>
+                <td class="td">388,626 km</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Constellation</td>
+                <td class="td">Libra</td>
+            </tr>
+        </table>
+        </br>
+        <table class="table" style="width: 20%; color:white;">
+            <tr class="topBar">
+                <td class="td" style="border-right-width: 0; font-weight: 600;">Appearance</td>
+                <td class="td" style="border-left-width: 0;"></td>
+            </tr>
+            <tr>
+                <td class="td">Diameter</td>
+                <td class="td">30.75'</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Illumination of disk</td>
+                <td class="td">0%</td>
+            </tr>
+            <tr>
+                <td class="td">Libration in longitude</td>
+                <td class="td">-4.796°</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Libration in latitude</td>
+                <td class="td">2.237°</td>
+            </tr>
+        </table>
+        <h4>Moons Position:</h4>
+        <img src="Images/moonchart.ashx">
+        <h4>Appearance of the Moon, celestial north is upwards:</h4>
+        <img src="Images/Moonchart.aspx">
+
+    </center>
+</body>
+
+</html>
+<script>
+    const x = document.getElementById("location");
+
+    function hide() {
+        document.getElementById("myPopup").style.display = "none"
+    }
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation now working.";
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                " Longitude: " + position.coords.longitude;
+        }
+    }
+
+    function convertTo24Hour(time) {
+        var hours = parseInt(time.substr(0, 2));
+        if (time.indexOf('AM') != -1 && hours == 12) {
+            time = time.replace('12', '0');
+        }
+        if (time.indexOf('PM') != -1 && hours < 12) {
+            time = time.replace(hours, (hours + 12));
+        }
+        return time.replace(/(am|pm)/, '');
+    }
+
+    function syncToNow() {
+        var date = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+        var time = date.substring(12, 22)
+        var ftime = time.replace("/", "-")
+        var time = ftime.replace("/", "-")
+
+        var todayDate = new Date().toISOString().slice(0, 10);
+        time = convertTo24Hour(time)
+        time = time.substring(0, 5)
+
+        document.getElementById("date").value = todayDate;
+        document.getElementById("time").value = time;
+    }
+</script>
