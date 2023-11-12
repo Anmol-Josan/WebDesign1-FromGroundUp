@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="Style/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heavens Above Home</title>
+  <title>Interactive Sky Chart</title>
 </head>
 
 <body>
@@ -105,34 +105,41 @@
       </tr>
     </table>
   </div>
-  <center>
-    <div class="grid-container" style="margin-top: 6.5%;">
-      <div class="grid-item item1">
-        <a>Starlink G6-27 launch currently planned for 04:01 UTC on 4th November from Cape Canaveral Space Force
-          Station.</a>
-      </div>
-      <div class="grid-item item2">
-        <img src="Images/orbitdisplay.png">
-        </br>
-        <a>Position of the ISS</a>
-      </div>
-      <div class="grid-item item3">
-        <a>Volutpat ac tincidunt vitae semper quis lectus nulla at. Lorem mollis aliquam ut porttitor leo a diam. Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Augue eget arcu dictum varius duis. Elementum
-          integer enim neque volutpat ac tincidunt vitae semper quis. Sed adipiscing diam donec adipiscing tristique
-          risus nec. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Tincidunt nunc pulvinar sapien et
-          ligula. Adipiscing elit ut aliquam purus. In nisl nisi scelerisque eu ultrices vitae. Mattis nunc sed blandit
-          libero volutpat sed. Accumsan tortor posuere ac ut consequat. Non consectetur a erat nam at lectus urna.
-          Consectetur adipiscing elit ut aliquam purus sit amet. Mi quis hendrerit dolor magna eget.
-
-          Arcu vitae elementum curabitur vitae nunc sed. Sodales ut etiam sit amet nisl purus in. In fermentum et
-          sollicitudin ac orci phasellus. Vel quam elementum pulvinar etiam. Fames ac turpis egestas integer eget
-          aliquet. Tristique magna sit amet purus gravida quis blandit. Morbi tristique senectus et netus et malesuada.
-          Blandit turpis cursus in hac habitasse platea dictumst quisque. Risus in hendrerit gravida rutrum quisque non
-          tellus orci ac. Bibendum ut tristique et egestas quis. Pellentesque sit amet porttitor eget dolor morbi non.
-          Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit.</a>
-      </div>
-    </div>
+  <h1 style="margin-top: 6%;">Interactive Sky Chart:</h1>
+  <center style="z-index: 2;">
+    <img src="Images/everthing.png" style="display: block; position:relative; margin-top: 1%; width:50%">
+    <form>
+      <table style="text-align: center;">
+        <tr>
+          <td><label for="date">Date Time:</label></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="datetime-local" name="date" id="date"></td>
+          <td style="padding-right: 0; margin-right: 0;"><input type="checkbox" id="ConstellationLines"
+              name="ConstellationLines">Constellation Lines</td>
+          <td><input type="checkbox" id="ConstellationBoundries" name="ConstellationBoundries">Constellation Boundries
+          </td>
+        </tr>
+        <tr>
+          <td><input type="reset"
+              style="padding-left:42%; padding-right: 42%; background-color: #444444; border-color: #444444; color:white">
+          </td>
+          <td><input type="checkbox" id="ConstellationNames" name="ConstellationNames">Constellation Name</td>
+          <td><input type="checkbox" id="RemoveEverything" name="RemoveEverything">Remove Lines and Names</td>
+        </tr>
+        <center>
+          <tr>
+            <td><input type="button"
+              style="padding-left:62%; display: block; padding-right: 62%; position:static; background-color: #444444; border-color: #444444; color:white"
+              value="Sync to Now"></td>
+            <td><input type="button"
+              style="padding-left:70%; display: block; margin-left: 64%; position: static; padding-right: 70%; background-color: #444444; border-color: #444444; color:white"
+              value="Submit"></td>
+          </tr>
+        </center>
+    </form>
+    </table>
   </center>
 </body>
 
@@ -155,4 +162,5 @@
         " Longitude: " + position.coords.longitude;
     }
   }
+</script>
 </script>
