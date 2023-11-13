@@ -27,53 +27,53 @@
   </center>
   <div class="navbar" style="z-index: 1; display: block;">
     <a href="index.html"
-        style="padding:0%; margin: 0%; width:8%; margin-right: 0%; padding-right: 0%; background-color:transparent;"
-        class="none"><img class="dropdown"
-            style="padding-right: 0%; position: inherit; width:100%; padding: 0.4%; margin-right:0%;"
-            src="Images/logo-removebg-preview (1).png"></a>
+      style="padding:0%; margin: 0%; width:8%; margin-right: 0%; padding-right: 0%; background-color:transparent;"
+      class="none"><img class="dropdown"
+        style="padding-right: 0%; position: inherit; width:100%; padding: 0.4%; margin-right:0%;"
+        src="Images/logo-removebg-preview (1).png"></a>
     <div class="dropdown">
-        <button class="dropbtn">
-            <div class="nav">Configuration</div><i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="observingLocation.html">Change Observing Location</a>
-        </div>
+      <button class="dropbtn">
+        <div class="nav">Configuration</div><i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="observingLocation.html">Change Observing Location</a>
+      </div>
     </div>
     <div class="dropdown1">
-        <button class="dropbtn1">Satellites<i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content1">
-            <a href="IssHeight.html">Height of ISS</a>
-        </div>
+      <button class="dropbtn1">Satellites<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content1">
+        <a href="IssHeight.html">Height of ISS</a>
+      </div>
     </div>
     <div class="dropdown2">
-        <button class="dropbtn2">Astronomy<i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content2">
-            <a href="interactiveChart.html">Interactive Sky Chart</a>
-            <a href="sun.html">Sun</a>
-            <a href="moon.html">Moon</a>
-        </div>
+      <button class="dropbtn2">Astronomy<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content2">
+        <a href="interactiveChart.html">Interactive Sky Chart</a>
+        <a href="sun.html">Sun</a>
+        <a href="moon.html">Moon</a>
+      </div>
     </div>
     <div class="dropdown3">
-        <button class="dropbtn3">Stats<i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content3">
-            <a href="privacy.html">Privacy Policy</a>
-        </div>
+      <button class="dropbtn3">Stats<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content3">
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
     </div>
     <div class="dropdown4">
-        <button class="dropbtn4">Misc<i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content4">
-            <a href="visitsOS.html">Visits by OS and Browser</a>
-        </div>
+      <button class="dropbtn4">Misc<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content4">
+        <a href="visitsOS.html">Visits by OS and Browser</a>
+      </div>
     </div>
     <table style="right:0px; width: 100%; position: absolute; text-align: right;">
-        <tr>
-            <td style=" color: white;">Location: <button onclick="getLocation()">Use my location</button></td>
-        </tr>
-        <tr>
-            <td style="color:white" id="location"></td>
-        </tr>
+      <tr>
+        <td style=" color: white;">Location: <button onclick="getLocation()">Use my location</button></td>
+      </tr>
+      <tr>
+        <td style="color:white" id="location"></td>
+      </tr>
     </table>
-</div>
+  </div>
   <h1 style="margin-top: 6%;">Interactive Sky Chart:</h1>
   <center style="z-index: 2;">
     <img src="Images/everthing.png" id="wheel" style="display: block; position:relative; margin-top: 1%; width:50%">
@@ -102,7 +102,7 @@
           <td><input type="reset"
               style="padding-left:42%; padding-right: 42%; background-color: #444444; border-color: #444444; color:white">
           </td>
-          <td><input type="button"
+          <td><input type="button" onclick="Update()"
               style="padding-left:40%; padding-right: 40%; background-color: #444444; border-color: #444444; color:white"
               value="Update">
           </td>
@@ -215,5 +215,4 @@
     }
   }
 
-</script>
 </script>
