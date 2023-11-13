@@ -70,7 +70,7 @@
         <a href="sun.html">Sun</a>
         <a href="moon.html">Moon</a>
         <a href="">Planets</a>
-        <a href="">Solar System Chart</a>
+        <a href="solarsystem.html">Solar System Chart</a>
         <a href="">Comets</a>
         <a href="">Asteriods</a>
         <a href="">Constellations</a>
@@ -139,7 +139,7 @@
           </td>
           <td><input type="button"
               style="padding-left:40%; padding-right: 40%; background-color: #444444; border-color: #444444; color:white"
-              value="Update"><!--There is no onclick event here because they have some aspx php syle code which I cannot incoroporate here, so this button is purely design-->
+              value="Update">
           </td>
         </tr>
     </form>
@@ -167,29 +167,50 @@
   }
 
   function convertTo24Hour(time) {
-    var hours = parseInt(time.substr(0, 2));
-    if (time.indexOf('AM') != -1 && hours == 12) {
-      time = time.replace('12', '0');
+        var hours = parseInt(time.substr(0, 2));
+        if (time.indexOf('AM') != -1 && hours == 12) {
+            time = time.replace('12', '0');
+        }
+        if (time.indexOf('PM') != -1 && hours < 12) {
+            time = time.replace(hours, (hours + 12));
+        }
+        return time.replace(/(am|pm)/, '');
     }
-    if (time.indexOf('PM') != -1 && hours < 12) {
-      time = time.replace(hours, (hours + 12));
+    
+    function formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+
+        return [year, month, day].join('-');
     }
-    return time.replace(/(am|pm)/, '');
-  }
 
-  function syncToNow() {
-    var date = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
-    var time = date.substring(12, 22)
-    var ftime = time.replace("/", "-")
-    var time = ftime.replace("/", "-")
+    function syncToNow() {
+        var date = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+        var time = date.substring(12, 22)
+        var ftime = time.replace("/", "-")
+        var time = ftime.replace("/", "-")
 
-    var todayDate = new Date().toISOString().slice(0, 10);
-    time = convertTo24Hour(time)
-    time = time.substring(0, 5)
+        var todayDate = new Date().toISOString().slice(0, 10);
+        time = convertTo24Hour(time)
+        time = time.substring(0, 5)
 
-    document.getElementById("date").value = todayDate;
-    document.getElementById("time").value = time;
-  }
+        var todayDate = new Date();
+        const offset = todayDate.getTimezoneOffset()
+        todayDate = new Date(todayDate.getTime() - (offset*60*1000))
+        todayDate.toISOString().split('T')[0]
+        console.log(formatDate(todayDate));
+        todayDate=formatDate(todayDate)
+
+        document.getElementById("date").value = todayDate;
+        document.getElementById("time").value = time;
+    }
 
   function Update() {
     var Name = document.getElementById("ConstellationNames")
