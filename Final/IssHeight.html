@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://use.typekit.net/loi6sxw.css">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/vnd.microsoft.icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location Picker</title>
+
+    <title>Sun</title>
 </head>
 
 <body>
@@ -89,13 +87,21 @@
             </tr>
         </table>
     </div>
-    <center style="margin-top: 5%;">
-        <div id="map" style="height: 700px; width: 1000px;"></div>
+    <center style="z-index: 2;">
+        <h1 style="margin-top: 6%;">ISS Height:</h1>
+        </br>
+        <img src="https://heavens-above.com/OrbitHeightPlot.aspx?Width=800&Height=600&satid=25544&cul=en">
+        </br>
+        <p style="width: 39%;">This plot shows the orbital height of the ISS over the last year. Clearly visible are the re-boosts which
+            suddenly increase the height, and the gradual decay in between. The height is averaged over one orbit, and
+            the gradual decrease is caused by atmospheric drag. As can be seen from the plot, the rate of descent is not
+            constant and this variation is caused by changes in the density of the tenuous outer atmosphere due mainly
+            to solar activity.</p>
+        </br>
     </center>
 </body>
 
 </html>
-
 <script>
     const x = document.getElementById("location");
 
@@ -107,7 +113,7 @@
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
+            x.innerHTML = "Geolocation now working.";
         }
         function showPosition(position) {
             x.innerHTML = "Latitude: " + position.coords.latitude +
@@ -115,19 +121,49 @@
         }
     }
 
-    var map = L.map('map').setView([47.64332055551951, 237.80129313468936], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-    function onMapClick(e) {
-        var test = JSON.stringify(e.latlng)
-        const obj = JSON.parse(test);
-        x.innerHTML = "Latitude: " + obj.lat +
-            " Longitude: " + obj.lng
-        var marker = L.marker([obj.lat, obj.lng]).addTo(map);
+    function convertTo24Hour(time) {
+        var hours = parseInt(time.substr(0, 2));
+        if (time.indexOf('AM') != -1 && hours == 12) {
+            time = time.replace('12', '0');
+        }
+        if (time.indexOf('PM') != -1 && hours < 12) {
+            time = time.replace(hours, (hours + 12));
+        }
+        return time.replace(/(am|pm)/, '');
     }
 
-    map.on('click', onMapClick);
+    function formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+
+        return [year, month, day].join('-');
+    }
+
+    function syncToNow() {
+        var date = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+        var time = date.substring(12, 22)
+        var ftime = time.replace("/", "-")
+        var time = ftime.replace("/", "-")
+
+        var todayDate = new Date().toISOString().slice(0, 10);
+        time = convertTo24Hour(time)
+        time = time.substring(0, 5)
+
+        var todayDate = new Date();
+        const offset = todayDate.getTimezoneOffset()
+        todayDate = new Date(todayDate.getTime() - (offset * 60 * 1000))
+        todayDate.toISOString().split('T')[0]
+        console.log(formatDate(todayDate));
+        todayDate = formatDate(todayDate)
+
+        document.getElementById("date").value = todayDate;
+        document.getElementById("time").value = time;
+    }
 </script>
