@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/vnd.microsoft.icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Moon</title>
+    <title>Visits by OS</title>
 </head>
 
 <body>
@@ -76,170 +76,187 @@
         </table>
     </div>
     <center style="z-index: 2;">
-        <h1 style="margin-top: 6%;">Moon:</h1>
-        <form>
-            <table style="text-align: center;">
-                <tr>
-                    <td><label for="date">Date:</label></td>
-                    <td><input type="date" name="date" id="date"></td>
-                    <td><label for="date">Time:</label></td>
-                    <td><input type="time" id="time" name="time"></td>
-                </tr>
-                <tr>
-                    <td><input type="button"
-                            style="padding-right: 60%; padding-left: 60%; margin-left: 2%; background-color: #444444; border-color: #444444; color:white"
-                            value="Sync to Now" onclick="syncToNow()"></td>
-                    <td><input type="button"
-                            style="padding-left:55%; padding-right: 55%; margin-left: 77%; background-color: #444444; border-color: #444444; color:white"
-                            value="Update"><!--There is no onclick event here because they have some aspx php syle code which I cannot incoroporate here, so this button is purely design-->
-                    </td>
-                </tr>
-            </table>
-        </form>
-        </table>
-        </br>
-        <table class="table" style="width: 20%; color:white">
+        <h1 style="margin-top: 6%;">Visits by Operating System and Browser Type:</h1>
+        <p>This table shows the number of visitors to Heavens-Above for the last 30 days,</p>
+        <p>sorted by operating system in the first table, and by browser type in the second table.</p>
+        <table class="table" style="color:white; width: 30%;">
             <tr class="topBar">
-                <td class="td" style="border-right-width: 0; font-weight: 600;">Position</td>
-                <td class="td" style="border-left-width: 0;"></td>
+                <td class="td">Operating System</td>
+                <td class="td">Visits</td>
+                <td class="td">Percent</td>
             </tr>
             <tr>
-                <td class="td">Altitude</td>
-                <td class="td">21.9°</td>
+                <td class="td">Unknown</td>
+                <td class="td">206,932</td>
+                <td class="td">54.94%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td">Azimuth</td>
-                <td class="td">199.6° (SSW)</td>
+                <td class="td">Android</td>
+                <td class="td">100,508</td>
+                <td class="td">26.68%</td>
             </tr>
             <tr>
-                <td class="td">Right ascension</td>
-                <td class="td">14h 42m 26s</td>
+                <td class="td">Macintosh</td>
+                <td class="td">29,112</td>
+                <td class="td">7.73%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td">Declination</td>
-                <td class="td">-18° 27' 28"</td>
+                <td class="td">iPhone</td>
+                <td class="td">23,574</td>
+                <td class="td">6.26%</td>
             </tr>
             <tr>
-                <td class="td">Range</td>
-                <td class="td">388,626 km</td>
+                <td class="td">Windows 7</td>
+                <td class="td">7,229</td>
+                <td class="td">1.92%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td">Constellation</td>
-                <td class="td">Libra</td>
-            </tr>
-        </table>
-        </br>
-        <table class="table" style="width: 20%; color:white;">
-            <tr class="topBar">
-                <td class="td" style="border-right-width: 0; font-weight: 600;">Appearance</td>
-                <td class="td" style="border-left-width: 0;"></td>
+                <td class="td">Linux</td>
+                <td class="td">5,470</td>
+                <td class="td">1.45%</td>
             </tr>
             <tr>
-                <td class="td">Diameter</td>
-                <td class="td">30.75'</td>
+                <td class="td">iPad</td>
+                <td class="td">2,342</td>
+                <td class="td">0.62%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td">Illumination of disk</td>
-                <td class="td">0%</td>
+                <td class="td">Windows 8.1</td>
+                <td class="td">798</td>
+                <td class="td">0.21%</td>
             </tr>
             <tr>
-                <td class="td">Libration in longitude</td>
-                <td class="td">-4.796°</td>
+                <td class="td">Windows XP</td>
+                <td class="td">366</td>
+                <td class="td">0.10%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td">Libration in latitude</td>
-                <td class="td">2.237°</td>
-            </tr>
-        </table>
-        </br>
-        <table class="table" style="color:white; width: 20%;">
-            <tr class="topBar">
-                <td class="td">Event</td>
-                <td class="td">Time</td>
-                <td class="td">Altitude</td>
-                <td class="td">Azimuth</td>
+                <td class="td">Windows 8</td>
+                <td class="td">155</td>
+                <td class="td">0.04%</td>
             </tr>
             <tr>
-                <td class="td">Sets</td>
-                <td class="td">16:07</td>
-                <td class="td">-0.8°</td>
-                <td class="td">242°</td>
+                <td class="td">Windows Vista</td>
+                <td class="td">84</td>
+                <td class="td">0.01%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td">Rises</td>
-                <td class="td">06:29</td>
-                <td class="td">-0.8°</td>
-                <td class="td">115°</td>
+                <td class="td">Windows 2000</td>
+                <td class="td">38</td>
+                <td class="td">7.73%</td>
             </tr>
             <tr>
-                <td class="td">Maximum altitude</td>
-                <td class="td">11:18</td>
-                <td class="td">24.4°</td>
-                <td class="td">179°</td>
+                <td class="td">Windows 2003 Server</td>
+                <td class="td">36</td>
+                <td class="td">0.01%</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Windows 98</td>
+                <td class="td">5</td>
+                <td class="td">0.00%</td>
+            </tr>
+            <tr>
+                <td class="td">Windows ME</td>
+                <td class="td">1</td>
+                <td class="td">0.00%</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Windows NT 4</td>
+                <td class="td">1</td>
+                <td class="td">0.00%</td>
             </tr>
         </table>
         </br>
-        <table class="table" style="width: 20%; color:white">
+        <p>Browers Types:</p>
+        <table class="table" style="color:white; width: 30%;">
             <tr class="topBar">
-                <td class="td" style="border-right-width: 0; font-weight: 600;">Monthly Phases</td>
-                <td class="td" style="border-left-width: 0;"></td>
+                <td class="td">Browser</td>
+                <td class="td">Visits</td>
+                <td class="td">Percent</td>
             </tr>
             <tr>
-                <td class="td"><img src="Images/fullmoon.gif"> Full Moon</td>
-                <td class="td">28 October 2023 13:24</td>
+                <td class="td">Chrome</td>
+                <td class="td">164,275</td>
+                <td class="td">43.61%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td"><img src="Images/3rdquarter.gif"> Last Quarter</td>
-                <td class="td">05 November 2023 01:37</td>
+                <td class="td">Safari</td>
+                <td class="td">94,089</td>
+                <td class="td">24.98%</td>
             </tr>
             <tr>
-                <td class="td"><img src="Images/newmoon.gif"> New Moon</td>
-                <td class="td">13 November 2023 01:27</td>
+                <td class="td">Unknown</td>
+                <td class="td">91,245</td>
+                <td class="td">24.23%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td"><img src="Images/1stquarter.gif"> First Quarter</td>
-                <td class="td">20 November 2023 02:50</td>
+                <td class="td">Firefox</td>
+                <td class="td">26,564</td>
+                <td class="td">7.05%</td>
             </tr>
             <tr>
-                <td class="td"><img src="Images/fullmoon.gif"> Full Moon</td>
-                <td class="td">27 November 2023 01:16</td>
-            </tr>
-        </table>
-        </br>
-        <table class="table" style="color:white; width: 20%;">
-            <tr class="topBar">
-                <td class="td" style="border-right-width: 0; font-weight: 600;">Perigee, Apogee</td>
-                <td class="td" style="border-right-width: 0; border-left-width: 0;"></td>
-                <td class="td" style="border-right-width: 0; border-left-width: 0;"></td>
-                <td class="td" style="border-left-width: 0;"></td>
-            </tr>
-            <tr>
-                <td class="td">Perigee</td>
-                <td class="td">364,872 km</td>
-                <td class="td">25 October 2023 20:03</td>
+                <td class="td">Internet Explorer 11</td>
+                <td class="td">248</td>
+                <td class="td">0.07%</td>
             </tr>
             <tr class="alternateRow">
-                <td class="td">Apogee</td>
-                <td class="td">404,569 km</td>
-                <td class="td">06 November 2023 13:50</td>
+                <td class="td">Opera</td>
+                <td class="td">84</td>
+                <td class="td">0.02%</td>
             </tr>
             <tr>
-                <td class="td">Perigee</td>
-                <td class="td">369,818 km</td>
-                <td class="td">21 November 2023 13:02</td>
+                <td class="td">Internet Explorer 7</td>
+                <td class="td">43</td>
+                <td class="td">0.01%</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Internet Explorer 6</td>
+                <td class="td">40</td>
+                <td class="td">0.01%</td>
             </tr>
             <tr>
-                <td class="td">Apogee</td>
-                <td class="td">404,346 km</td>
-                <td class="td">04 December 2023 10:43</td>
+                <td class="td">Internet Explorer 10</td>
+                <td class="td">28</td>
+                <td class="td">0.01%</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Internet Explorer 8</td>
+                <td class="td">27</td>
+                <td class="td">0.01%</td>
+            </tr>
+            <tr>
+                <td class="td">Internet Explorer 9</td>
+                <td class="td">6</td>
+                <td class="td">0.00%</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Internet Explorer 5</td>
+                <td class="td">2</td>
+                <td class="td">0.00%/td>
+            </tr>
+            <tr>
+                <td class="td">Windows 2003 Server</td>
+                <td class="td">36</td>
+                <td class="td">0.01%</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Windows 98</td>
+                <td class="td">5</td>
+                <td class="td">0.00%</td>
+            </tr>
+            <tr>
+                <td class="td">Windows ME</td>
+                <td class="td">1</td>
+                <td class="td">0.00%</td>
+            </tr>
+            <tr class="alternateRow">
+                <td class="td">Windows NT 4</td>
+                <td class="td">1</td>
+                <td class="td">0.00%</td>
             </tr>
         </table>
 
-        <h4>Moons Position:</h4>
-        <img src="Images/moonchart.ashx">
-        <h4>Appearance of the Moon, celestial north is upwards:</h4>
-        <img src="Images/Moonchart.aspx">
-
+        </br>
     </center>
 </body>
 

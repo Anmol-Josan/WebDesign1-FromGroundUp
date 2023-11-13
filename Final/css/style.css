@@ -185,8 +185,6 @@ html{
 
   /* Dropdown content (hidden by default) */
   .dropdown-content1 {
-    overflow: auto;
-    height:800%;
     display: none;
     position: absolute;
     background-color: #222222;
