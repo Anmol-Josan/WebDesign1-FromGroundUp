@@ -28,7 +28,7 @@
     </div>
     -->
     </center>
-    <div class="navbar" style="z-index: 1; display: block;">
+    <div class="navbar" style="z-index: 12; display: block;">
         <a href="index.html"
             style="padding:0%; margin: 0%; width:8%; margin-right: 0%; padding-right: 0%; background-color:transparent;"
             class="none"><img class="dropdown"
@@ -78,7 +78,8 @@
         </table>
     </div>
     <center style="margin-top: 5%;">
-        <div id="map" style="height: 700px; width: 1000px;"></div>
+        </br>
+        <div id="map" style="height: 500px; width: 1000px; z-index: 1;"></div>
     </center>
 </body>
 
@@ -115,6 +116,7 @@
         x.innerHTML = "Latitude: " + obj.lat +
             " Longitude: " + obj.lng
         var marker = L.marker([obj.lat, obj.lng]).addTo(map);
+        L.marker([obj.lat, obj.lng]).removeFrom(map);
     }
 
     map.on('click', onMapClick);
